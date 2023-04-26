@@ -14,7 +14,10 @@ const AnimalShow = ({ type }) => {
     const [heartSize, setHeartSize] = useState(30);
 
     const handleHeartClick = () => {
-        setHeartSize(heartSize + 5);
+        if (heartSize < 250) {
+            setHeartSize(heartSize + 5);
+        }
+
     }
 
     return (
